@@ -12,7 +12,7 @@ import EditNote from './features/notes/EditNote'
 import NewNote from './features/notes/NewNote'
 import PersistLogin from './features/auth/PersistLogin'
 import RequireAuth from './features/auth/RequireAuth'
-import Prefetch from './features/auth/Prefetch.jsx'
+import Prefetch from './features/auth/Prefetch'
 import { ROLES } from './config/roles'
 import useTitle from './hooks/useTitle';
  
