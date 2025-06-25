@@ -10,9 +10,9 @@ import EditUser from './features/users/EditUser'
 import NewUserForm from './features/users/NewUserForm'
 import EditNote from './features/notes/EditNote'
 import NewNote from './features/notes/NewNote'
-import Prefetch from './features/auth/Prefetch.jsx'
 import PersistLogin from './features/auth/PersistLogin'
 import RequireAuth from './features/auth/RequireAuth'
+import Prefetch from './features/auth/Prefetch.jsx'
 import { ROLES } from './config/roles'
 import useTitle from './hooks/useTitle';
  
