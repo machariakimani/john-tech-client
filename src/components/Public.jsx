@@ -71,7 +71,7 @@ const Public = () => {
                         </div>
 
                         {/* Right Side - Photo Placeholder */}
-                        <div className="order-first md:order-last p-7 rounded-lg bg-gradient-to-br from-blue-300 via-green-300 to-violet-300   ">
+                        <div className="order-first md:order-last p-3 md:p-7 rounded-lg bg-gradient-to-br from-blue-300 via-green-300 to-yellow-200   ">
                             <img className='rounded-lg' src={Tech} />
                         </div>
                     </main>
