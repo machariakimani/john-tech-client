@@ -10,6 +10,7 @@ import {
     Loader2,
     StickyNote
 } from 'lucide-react'
+import Logo from "../assets/logo.jpg"
 
 const DASH_REGEX = /^\/dash(\/)?$/
 const NOTES_REGEX = /^\/dash\/notes(\/)?$/
@@ -157,11 +158,11 @@ const DashHeader = () => {
                             to="/dash"
                             className="flex items-center gap-2 group"
                         >
-                            <div className="p-2 bg-blue-600 rounded-lg group-hover:bg-blue-700 transition-colors duration-200">
-                                <StickyNote className="w-6 h-6 text-white" />
+                            <div className="p-1  bg-blue-600 rounded-lg group-hover:bg-blue-700 transition-colors duration-200">
+                                <img className='h-10' src={Logo} />
                             </div>
                             <h1 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
-                                techNotes
+                               John-Tech
                             </h1>
                         </Link>
 

@@ -14,6 +14,7 @@ import PersistLogin from './features/auth/PersistLogin'
 import RequireAuth from './features/auth/RequireAuth'
 import { ROLES } from './config/roles'
 import useTitle from './hooks/useTitle';
+
  
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
 
         {/* Protected Routes */}
         <Route element={<PersistLogin />}>
+        
           <Route element={<RequireAuth allowedRoles={[...Object.values(ROLES)]} />}>
             
               <Route path="dash" element={<DashLayout />}>
@@ -49,7 +51,9 @@ function App() {
 
               </Route>{/* End Dash */}
             
-          </Route>
+         
+        </Route>
+          
         </Route>{/* End Protected Routes */}
 
       </Route>

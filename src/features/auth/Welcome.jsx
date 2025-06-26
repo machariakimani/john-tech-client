@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react'
 import { FileText, Plus, Users, UserPlus, Clock, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import useTitle from '../../hooks/useTitle';
 
 const Welcome = () => {
+    useTitle("Welcome: John-Tech-Repairs")
      const { username, isManager, isAdmin } = useAuth()
     const [currentTime, setCurrentTime] = useState(new Date())
 
@@ -21,11 +23,11 @@ const Welcome = () => {
     }).format(currentTime)
 
     const content = (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <div className="min-h-screen bg-gradient-to-br from-blue-200 via-indigo-50 to-purple-50">
             {/* Background Pattern */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.1)_1px,transparent_0)] bg-[length:24px_24px]" />
             
-            <div className="relative min-h-screen flex flex-col items-center justify-center px-4 py-12">
+            <div className="relative min-h-screen flex flex-col items-center justify-center px-2 py-12">
                 {/* Welcome Header */}
                 <div className="text-center mb-12">
                     <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-white/20 mb-6">

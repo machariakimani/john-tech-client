@@ -1,7 +1,9 @@
 import { useGetUsersQuery } from "./usersApiSlice"
 import User from './User'
+import useTitle from "../../hooks/useTitle"
 
 const UsersList = () => {
+    useTitle("Users:John-Tech-Repairs")
     const {
         data: users,
         isLoading,
@@ -38,7 +40,7 @@ const UsersList = () => {
             : null
 
         content = (
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden mx-4 my-6">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden md:mx-4 my-6">
                 {/* Header */}
                 <div className="bg-gradient-to-r from-blue-400 to-blue-500 px-6 py-4">
                     <h2 className="text-xl font-bold text-white flex items-center">

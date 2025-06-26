@@ -5,8 +5,11 @@ import { useDispatch } from 'react-redux'
 import { setCredentials } from './authSlice'
 import { useLoginMutation } from './authApiSlice'
 import usePersist from '../../hooks/usePersist'
+import useTitle from '../../hooks/useTitle'
 
 const Login = () => {
+useTitle("Login : John-Tech-Repairs")
+
     const userRef = useRef()
     const errRef = useRef()
     const [username, setUsername] = useState('')
@@ -39,7 +42,7 @@ const Login = () => {
             } else if (err.status === 400) {
                 setErrMsg('Missing Username or Password');
             } else if (err.status === 401) {
-                setErrMsg('Unauthorized');
+                setErrMsg('Invalid Login Credentials');
             } else {
                 setErrMsg(err.data?.message);
             }

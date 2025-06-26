@@ -1,8 +1,10 @@
 import { useGetNotesQuery } from "./notesApiSlice"
 import Note from "./Note"
 import useAuth from "../../hooks/useAuth"
+import useTitle from "../../hooks/useTitle"
 
 const NotesList = () => {
+    useTitle("Notes:John-Tech-Repairs")
      const { username, isManager, isAdmin } = useAuth()
     const {
         data: notes,
@@ -46,9 +48,9 @@ const NotesList = () => {
         const tableContent = ids?.length && filteredIds.map(noteId => <Note key={noteId} noteId={noteId} />)
 
         content = (
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden mx-4 my-6">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-300 overflow-hidden md:mx-6 my-6">
                 {/* Header */}
-                <div className="bg-gradient-to-r from-blue-400 to-blue-500 px-6 py-4">
+                <div className="bg-gradient-to-r from-blue-500 to-blue-400 px-7 py-4">
                     <h2 className="text-xl font-bold text-white flex items-center">
                         <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
